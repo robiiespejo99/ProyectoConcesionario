@@ -156,31 +156,9 @@ public class Window_RegistrarCompra extends javax.swing.JFrame {
         Proveedor proveedor = new Proveedor(jTextFieldNombreProveedor.getText(), jTextFieldPaisProveedor.getText());
         Compra compra = new Compra(jTextFieldFechaCompra.getText(), Integer.parseInt(jTextFieldPrecioUnitario.getText()));
         detalleCompra detallecompra = new detalleCompra(Integer.parseInt(jTextFieldCantidad.getText()));
-     
-      //  db.Conexion();
-        
         Cotroller.Proveedor.insert(proveedor, db);
         Cotroller.Compra.insert(compra, db);
         Cotroller.detalleCompra.insert(detallecompra, db);
-        
-        
-      /*  Cotroller.Proveedor.list(db);
-        Cotroller.Compra.list(db);
-        Cotroller.detalleCompra.list(db);
-        */
-       // Cotroller.Auto.insert(auto, db);
-      /*  auto.("Registros", jTextFieldID.getText(),
-                jTextFieldNombre.getText(),
-                jTextFieldApellido.getText(),
-                jTextFieldEdad.getText(),
-                jComboBoxSexo.getSelectedItem().toString());*/
-        
-     /*   try {
-			db.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
         this.dispose();
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
