@@ -5,12 +5,18 @@ import java.util.Scanner;
 import Cotroller.Conexion;
 
 public class Principal {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Scanner scanner = new Scanner (System.in);
+		//Conexion db = new Conexion();
+Window w = new Window();
+    w.setVisible(true);
+	/*	Scanner scanner = new Scanner (System.in);
 		Conexion conexion = new Conexion();
+		
+		System.out.println("Eliga la actividad a realizar");		
+		
+		
 		
 		Modell.Auto auto = Auto.read(scanner);
 		Modell.Categoria categoria = Categoria.read(scanner);
@@ -24,6 +30,6 @@ public class Principal {
 			conexion.close();
 		}catch(SQLException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 }

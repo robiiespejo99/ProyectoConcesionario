@@ -34,8 +34,7 @@ public class Conexion {
 		}
 
 	}
-
-
+	
 	public void consulta(String sql) throws Throwable {
 		sentencia = conn.prepareStatement(sql);
 	}
