@@ -14,7 +14,7 @@ public class Cliente {
 		} catch (Throwable e) {
 			e.printStackTrace();
 			System.out.println("Error en la consulta de Cliente");
-		}		
+		}
 		return cliente;
 	}
 }

@@ -3,13 +3,24 @@ package Cotroller;
 import java.sql.ResultSet;
 
 public class Compra {
-
-	public static Modell.Compra insert(Modell.Compra compra, Conexion conexion) {
-		String sql = "insert into compra(fechaCompra, precioUnidad) values (?,?)";
+private static int codigoForaneo;
+	public static Modell.Compra insert(Modell.Compra compra, Conexion conexion, Modell.Proveedor proveedor) {
+		String sql = "insert into compra(fechaCompra, precioUnidad) values (?,?,?)";
 		try {
 			conexion.consulta(sql);
+			
+			
 			conexion.getSentencia().setString(1, compra.getFechaCompra());
 			conexion.getSentencia().setInt(2, compra.getPrecioUnidad());
+			try {
+				ResultSet resultSet;
+				resultSet = conexion.resultado();
+			codigoForaneo = resultSet.getInt("codigoProveedor");
+			conexion.getSentencia().setInt(3, codigoForaneo);
+			resultSet.close();
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
 			conexion.modificacion();
 		} catch (Throwable e) {
 			e.printStackTrace();

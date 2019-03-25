@@ -40,7 +40,7 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Borrar Registro");
+        setTitle("Registro de Venta");
         setResizable(false);
 
         LabelNombreCliente.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N

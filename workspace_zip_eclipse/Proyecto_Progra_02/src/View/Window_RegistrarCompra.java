@@ -38,7 +38,7 @@ public class Window_RegistrarCompra extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de Usuario");
+        setTitle("Registro de Venta");
         setResizable(false);
 
         jTextFieldNombreProveedor.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -157,7 +157,7 @@ public class Window_RegistrarCompra extends javax.swing.JFrame {
         Compra compra = new Compra(jTextFieldFechaCompra.getText(), Integer.parseInt(jTextFieldPrecioUnitario.getText()));
         detalleCompra detallecompra = new detalleCompra(Integer.parseInt(jTextFieldCantidad.getText()));
         Cotroller.Proveedor.insert(proveedor, db);
-        Cotroller.Compra.insert(compra, db);
+        Cotroller.Compra.insert(compra, db, proveedor);
         Cotroller.detalleCompra.insert(detallecompra, db);
         this.dispose();
     }//GEN-LAST:event_jButtonRegisterActionPerformed
