@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 public class Compra {
 
 	public static Modell.Compra insert(Modell.Compra compra, Conexion conexion) {
-		String sql = "insert into compra(precioUnidad, fechaCompra) values (?,?)";
+		String sql = "insert into compra(fechaCompra, precioUnidad) values (?,?)";
 		try {
 			conexion.consulta(sql);
 			conexion.getSentencia().setString(1, compra.getFechaCompra());

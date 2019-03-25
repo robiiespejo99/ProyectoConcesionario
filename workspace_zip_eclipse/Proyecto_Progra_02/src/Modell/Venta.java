@@ -3,10 +3,10 @@ package Modell;
 public class Venta {
 
 	private int codigoVenta;
-	private int fechaVenta;
+	private String fechaVenta;
 	private int codigoEmpleado; //Foreign key
 	private int precioAuto;
-	public Venta(int fechaVenta, int precioAuto) {
+	public Venta(String fechaVenta, int precioAuto) {
 
 		this.fechaVenta = fechaVenta;
 		this.precioAuto = precioAuto;
@@ -14,13 +14,13 @@ public class Venta {
 	/**
 	 * @return the fechaVenta
 	 */
-	public int getFechaVenta() {
+	public String getFechaVenta() {
 		return fechaVenta;
 	}
 	/**
 	 * @param fechaVenta the fechaVenta to set
 	 */
-	public void setFechaVenta(int fechaVenta) {
+	public void setFechaVenta(String fechaVenta) {
 		this.fechaVenta = fechaVenta;
 	}
 	/**

@@ -6,8 +6,8 @@ public class Cliente {
 	private String nombreCliente;
 	private String apellidoCliente;
 	private String direccionCliente;
-	private int telefono;
-	public Cliente(String nombreCliente, String apellidoCliente, String direccionCliente, int telefono) {
+	private String telefono;
+	public Cliente(String nombreCliente, String apellidoCliente, String direccionCliente, String telefono) {
 		
 		this.nombreCliente = nombreCliente;
 		this.apellidoCliente = apellidoCliente;
@@ -53,13 +53,13 @@ public class Cliente {
 	/**
 	 * @return the telefono
 	 */
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 	/**
 	 * @param telefono the telefono to set
 	 */
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	
