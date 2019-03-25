@@ -138,7 +138,7 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGetActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        Window_Delete wd = new Window_Delete();
+        Window_RegistrarVenta wd = new Window_RegistrarVenta();
         wd.setVisible(true);
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
