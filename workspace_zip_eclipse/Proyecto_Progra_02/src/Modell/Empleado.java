@@ -6,11 +6,13 @@ public class Empleado {
 	private String nombreEmpleado;
 	private String apellidoEmpleado;
 	private String cargoEmpleado;
-	public Empleado(String nombreEmpleado, String apellidoEmpleado, String cargoEmpleado) {
+	private int telefonoEmpleado;
+	public Empleado(String nombreEmpleado, String apellidoEmpleado, String cargoEmpleado, int telefonoEmpleado) {
 	
 		this.nombreEmpleado = nombreEmpleado;
 		this.apellidoEmpleado = apellidoEmpleado;
 		this.cargoEmpleado = cargoEmpleado;
+		this.telefonoEmpleado = telefonoEmpleado;
 	}
 	/**
 	 * @return the nombreEmpleado
@@ -48,5 +50,18 @@ public class Empleado {
 	public void setCargoEmpleado(String cargoEmpleado) {
 		this.cargoEmpleado = cargoEmpleado;
 	}
+	/**
+	 * @return the telefonoEmpleado
+	 */
+	public int getTelefonoEmpleado() {
+		return telefonoEmpleado;
+	}
+	/**
+	 * @param telefonoEmpleado the telefonoEmpleado to set
+	 */
+	public void setTelefonoEmpleado(int telefonoEmpleado) {
+		this.telefonoEmpleado = telefonoEmpleado;
+	}
+	
 	
 }

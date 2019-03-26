@@ -133,13 +133,20 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
         LabelDescuentoAuto = new JLabel();
         LabelDescuentoAuto.setText("Descuento Auto :");
         LabelDescuentoAuto.setFont(new Font("Century Gothic", Font.BOLD, 14));
+        
+        LabelTelefonoEmpleado = new JLabel();
+        LabelTelefonoEmpleado.setText("Telefono Empleado :");
+        LabelTelefonoEmpleado.setFont(new Font("Century Gothic", Font.BOLD, 14));
+        
+        jTextFieldTelefonoEmpleado = new JTextField();
+        jTextFieldTelefonoEmpleado.setFont(new Font("Century Gothic", Font.PLAIN, 12));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         layout.setHorizontalGroup(
         	layout.createParallelGroup(Alignment.TRAILING)
         		.addGroup(layout.createSequentialGroup()
-        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        			.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
         					.addGroup(layout.createParallelGroup(Alignment.TRAILING)
         						.addGroup(layout.createSequentialGroup()
@@ -165,32 +172,39 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
         								.addComponent(jTextFieldPrecioAuto, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE)
         								.addComponent(jTextFieldFechaVenta, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE)
         								.addComponent(jTextFieldTelefonoCliente, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE)))))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        				.addGroup(layout.createSequentialGroup()
         					.addGap(55)
         					.addComponent(RegistrarVenta)
         					.addPreferredGap(ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
         					.addComponent(jButtonCancel))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
         					.addComponent(LableNombreEmpleado, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
         					.addPreferredGap(ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
         					.addComponent(jTextFieldNombreEmpleado, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
-        					.addComponent(LableApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-        					.addPreferredGap(ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-        					.addComponent(jTextFieldApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(LableApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(LabelTelefonoEmpleado, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addGroup(layout.createSequentialGroup()
+        							.addPreferredGap(ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+        							.addComponent(jTextFieldApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))
+        						.addGroup(layout.createSequentialGroup()
+        							.addGap(18)
+        							.addComponent(jTextFieldTelefonoEmpleado, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))))
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
         					.addComponent(LableCargoEmpleado, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
         					.addPreferredGap(ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
         					.addComponent(jTextFieldCargoEmpleado, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         					.addComponent(LabelCantidadAuto, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
         					.addGap(18)
         					.addComponent(jTextFieldCantidadAuto, GroupLayout.PREFERRED_SIZE, 206, GroupLayout.PREFERRED_SIZE))
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
         					.addComponent(LabelDescuentoAuto, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
         					.addPreferredGap(ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
@@ -230,13 +244,17 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
         				.addComponent(LableNombreEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
         			.addPreferredGap(ComponentPlacement.RELATED)
         			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addComponent(jTextFieldApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
         				.addGroup(layout.createSequentialGroup()
-        					.addComponent(jTextFieldApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+        					.addComponent(LableApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
         					.addPreferredGap(ComponentPlacement.RELATED)
         					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        						.addComponent(jTextFieldCargoEmpleado, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-        						.addComponent(LableCargoEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)))
-        				.addComponent(LableApellidoEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
+        						.addComponent(LabelTelefonoEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(jTextFieldTelefonoEmpleado, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))))
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+        				.addComponent(jTextFieldCargoEmpleado, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(LableCargoEmpleado, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
         			.addPreferredGap(ComponentPlacement.RELATED)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
         				.addComponent(LabelCantidadAuto, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
@@ -259,15 +277,16 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
     private void jButtonEraseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEraseActionPerformed
        
      
-    	Cliente cliente = new Cliente(jTextFieldNombreCliente.getText(), jTextFieldApellidoCliente.getText(), jTextFieldDireccionCliente.getText(),jTextFieldTelefonoCliente.getText());
-        Venta venta = new Venta(jTextFieldFechaVenta.getText(), Integer.parseInt(jTextFieldPrecioAuto.getText()));
-        Empleado empleado = new Empleado(jTextFieldNombreEmpleado.getText(), jTextFieldApellidoEmpleado.getText(), jTextFieldCargoEmpleado.getText());
+    	Cliente cliente = new Cliente(jTextFieldNombreCliente.getText(), jTextFieldApellidoCliente.getText(), jTextFieldDireccionCliente.getText(),Integer.parseInt(jTextFieldTelefonoCliente.getText()));
+    	Empleado empleado = new Empleado(jTextFieldNombreEmpleado.getText(), jTextFieldApellidoEmpleado.getText(), jTextFieldCargoEmpleado.getText(), Integer.parseInt(jTextFieldTelefonoEmpleado.getText()));
+    	Venta venta = new Venta(jTextFieldFechaVenta.getText(), Integer.parseInt(jTextFieldPrecioAuto.getText()));
         detalleVenta detalleventa = new detalleVenta(Integer.parseInt(jTextFieldCantidadAuto.getText()), Integer.parseInt(jTextFieldDescuentoAuto.getText()));
         
         Cotroller.Cliente.insert(cliente, db);
-        Cotroller.Venta.insert(venta, db);
         Cotroller.Empleado.insert(empleado, db);
-        Cotroller.detalleVenta.insert(detalleventa, db);
+        
+        Cotroller.Venta.insert(venta, db, empleado, cliente);
+        Cotroller.detalleVenta.insert(detalleventa, db, venta);
         
        this.dispose();
     }
@@ -322,4 +341,6 @@ public class Window_RegistrarVenta extends javax.swing.JFrame {
     private JTextField jTextFieldCantidadAuto;
     private JTextField jTextFieldDescuentoAuto;
     private JLabel LabelDescuentoAuto;
+    private JLabel LabelTelefonoEmpleado;
+    private JTextField jTextFieldTelefonoEmpleado;
 }

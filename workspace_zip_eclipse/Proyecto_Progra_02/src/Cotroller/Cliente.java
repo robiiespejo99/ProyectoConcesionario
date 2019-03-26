@@ -9,7 +9,7 @@ public class Cliente {
 			conexion.getSentencia().setString(1, cliente.getNombreCliente());
 			conexion.getSentencia().setString(2, cliente.getApellidoCliente());
 			conexion.getSentencia().setString(3, cliente.getDireccionCliente());
-			conexion.getSentencia().setString(4, cliente.getTelefono());
+			conexion.getSentencia().setInt(4, cliente.getTelefono());
 			conexion.modificacion();
 		} catch (Throwable e) {
 			e.printStackTrace();

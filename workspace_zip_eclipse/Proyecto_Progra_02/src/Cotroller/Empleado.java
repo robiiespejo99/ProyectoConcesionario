@@ -3,12 +3,13 @@ package Cotroller;
 public class Empleado {
 
 	public static Modell.Empleado insert(Modell.Empleado empleado, Conexion conexion) {
-		String sql = "insert into empleado(nombreEmpleado, apellidoEmpleado, cargoEmpleado) values (?,?,?)";
+		String sql = "insert into empleado(nombreEmpleado, apellidoEmpleado, cargoEmpleado, telefonoEmpleado) values (?,?,?,?)";
 		try {
 			conexion.consulta(sql);
 			conexion.getSentencia().setString(1, empleado.getNombreEmpleado());
 			conexion.getSentencia().setString(2, empleado.getApellidoEmpleado());
 			conexion.getSentencia().setString(3, empleado.getCargoEmpleado());
+			conexion.getSentencia().setInt(4, empleado.getTelefonoEmpleado());
 			conexion.modificacion();
 		} catch (Throwable e) {
 			e.printStackTrace();

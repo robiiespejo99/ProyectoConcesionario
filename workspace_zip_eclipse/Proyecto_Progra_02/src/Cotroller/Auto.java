@@ -19,7 +19,7 @@ public class Auto {
 		} catch (Throwable e) {
 			e.printStackTrace();
 			System.out.println("Error en la consulta de Auto");
-		}		
+		}
 		return auto;
 	}
 

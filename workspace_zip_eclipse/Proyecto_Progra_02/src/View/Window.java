@@ -108,15 +108,8 @@ public class Window extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
    private void jButtonGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGetActionPerformed
-    	//db.Conexion();
-       // db.getValues("Registros");
-       
-			/*try {
-				db.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
+	   Window_Obtain_Register wod = new Window_Obtain_Register();
+	   wod.setVisible(true);
     }//GEN-LAST:event_jButtonGetActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
