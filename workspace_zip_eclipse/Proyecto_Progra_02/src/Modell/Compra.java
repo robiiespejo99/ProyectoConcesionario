@@ -2,6 +2,8 @@ package Modell;
 
 public class Compra {
  
+	private int codigoproveedor;
+	
 	private String fechaCompra;
 	private int precioUnidad;
 	public Compra(String fechaCompra, int precioUnidad) {
@@ -32,6 +34,19 @@ public class Compra {
 	 */
 	public void setPrecioUnidad(int precioUnidad) {
 		this.precioUnidad = precioUnidad;
+	}
+	/**
+	 * @return the codigoproveedor
+	 */
+	public int getCodigoproveedor() {
+		return codigoproveedor;
+	}
+
+	/**
+	 * @param codigoproveedor the codigoproveedor to set
+	 */
+	public void setCodigoproveedor(int codigoproveedor) {
+		this.codigoproveedor = codigoproveedor;
 	}
 	
 }

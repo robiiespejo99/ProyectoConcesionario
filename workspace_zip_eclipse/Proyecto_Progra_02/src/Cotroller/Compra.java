@@ -6,6 +6,7 @@ public class Compra {
 
 	public static Modell.Compra insert(Modell.Compra compra, Conexion conexion, Modell.Proveedor proveedor) {
 		int foranea = Integer.parseInt(listObtencion(conexion, proveedor));
+		compra.setCodigoproveedor(foranea);
 		System.out.println(foranea);
 		String sql = "insert into compra(fechaCompra, precioUnidad, codigoProveedor) values (?,?,?)";
 		try {
@@ -43,7 +44,6 @@ public class Compra {
 	}
 	public static String listObtencion(Conexion conexion, Modell.Proveedor proveedor) {
 		String result = "";
-		System.out.println("hola");
 		String nombreProveedor = proveedor.getNombreProveedor();
 		System.out.println(nombreProveedor);
 		String sql_2 = "SELECT * FROM proveedor WHERE nombreProveedor = " + "'"+ nombreProveedor + "'";

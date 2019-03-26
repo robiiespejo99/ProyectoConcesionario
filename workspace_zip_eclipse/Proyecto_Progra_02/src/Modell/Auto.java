@@ -17,7 +17,7 @@ public class Auto {
 		this.codigoCategoria = codigoCategoria;
 		this.stock = stock;
 	}
-	public Auto(String nombreMarca, String colorAuto, int stock) {
+	public Auto(String nombreMarca, String colorAuto) {
 		this.codigoAuto = codigoAuto;
 		this.nombreMarca = nombreMarca;
 		this.colorAuto = colorAuto;
