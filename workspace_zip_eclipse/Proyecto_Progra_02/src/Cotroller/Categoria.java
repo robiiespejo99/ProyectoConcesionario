@@ -34,7 +34,6 @@ public class Categoria {
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
-		
 		return result;
 	}
 }

@@ -3,24 +3,16 @@ package Cotroller;
 import java.sql.ResultSet;
 
 public class Compra {
-private static int codigoForaneo;
+
 	public static Modell.Compra insert(Modell.Compra compra, Conexion conexion, Modell.Proveedor proveedor) {
-		String sql = "insert into compra(fechaCompra, precioUnidad) values (?,?,?)";
+		int foranea = Integer.parseInt(listObtencion(conexion, proveedor));
+		System.out.println(foranea);
+		String sql = "insert into compra(fechaCompra, precioUnidad, codigoProveedor) values (?,?,?)";
 		try {
 			conexion.consulta(sql);
-			
-			
 			conexion.getSentencia().setString(1, compra.getFechaCompra());
 			conexion.getSentencia().setInt(2, compra.getPrecioUnidad());
-			try {
-				ResultSet resultSet;
-				resultSet = conexion.resultado();
-			codigoForaneo = resultSet.getInt("codigoProveedor");
-			conexion.getSentencia().setInt(3, codigoForaneo);
-			resultSet.close();
-			} catch (Throwable e) {
-				e.printStackTrace();
-			}
+			conexion.getSentencia().setInt(3, foranea);
 			conexion.modificacion();
 		} catch (Throwable e) {
 			e.printStackTrace();
@@ -47,6 +39,28 @@ private static int codigoForaneo;
 			e.printStackTrace();
 		}
 		
+		return result;
+	}
+	public static String listObtencion(Conexion conexion, Modell.Proveedor proveedor) {
+		String result = "";
+		System.out.println("hola");
+		String nombreProveedor = proveedor.getNombreProveedor();
+		System.out.println(nombreProveedor);
+		String sql_2 = "SELECT * FROM proveedor WHERE nombreProveedor = " + "'"+ nombreProveedor + "'";
+		ResultSet resultSet;
+		
+		try {
+			System.out.println(sql_2);
+			conexion.consulta(sql_2);
+			resultSet = conexion.resultado();
+			 while (resultSet.next()) {
+					result = result + resultSet.getInt("codigoProveedor");
+					break;
+				}
+				resultSet.close();
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 		return result;
 	}
 	
