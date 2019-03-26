@@ -47,7 +47,7 @@ public class Window_RegistrarCompra extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de Venta");
+        setTitle("Registro de Compra");
         setResizable(false);
 
         jTextFieldNombreProveedor.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N

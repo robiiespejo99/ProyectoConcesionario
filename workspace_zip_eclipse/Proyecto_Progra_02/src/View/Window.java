@@ -56,7 +56,7 @@ public class Window extends javax.swing.JFrame {
         jButtonRegistrarVenta.setEnabled(false);
         jButtonRegistrarVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
+                jButtonRegisterbuyActionPerformed(evt);
             }
         });
 
@@ -112,7 +112,7 @@ public class Window extends javax.swing.JFrame {
 	   wod.setVisible(true);
     }//GEN-LAST:event_jButtonGetActionPerformed
 
-    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+    private void jButtonRegisterbuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         Window_RegistrarVenta wd = new Window_RegistrarVenta();
         wd.setVisible(true);
     }
@@ -128,6 +128,7 @@ public class Window extends javax.swing.JFrame {
             }
         });
     }
+    
     private javax.swing.JButton jButtonConnect;
     private javax.swing.JButton jButtonRegistrarVenta;
     private javax.swing.JButton jButtonObtenerRegistro;
